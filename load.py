@@ -108,7 +108,7 @@ def ImageToMask(t):
 
 tr_im=loadim(a=-1,j="trainimages")
 tr_ma=loadim(a=-1,j="trainmasks")
-teimage=loadim(a=-1,j="test")
+#teimage=loadim(a=-1,j="test")
 
 trdepth,tedepth=loadcsv()
 trdepth=sorted(trdepth,key=lambda t:t[0])
@@ -128,6 +128,7 @@ for t in tr_im_ma_dep:
     count[t[2]//50]+=1
 x=[ma_dep_research[i]//max(1,count[i]) for i in range(20)]
 print(x)
+print(count)
 
 
 
